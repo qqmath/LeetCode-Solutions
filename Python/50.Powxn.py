@@ -6,7 +6,7 @@
 class Solution:
     def myPow(self, x: float, n: int) -> float:
         if not n: return 1
-        power = self.myPow(x, int(n/2))
+        power = self.myPow(x, n // 2)
         if n % 2 == 0:
             return power * power
         else:

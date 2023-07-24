@@ -28,10 +28,7 @@ class Solution:
             left,right = i,i
             ls = ""
             while 0<=left<size and 0<=right<size and s[left]==s[right]:
-                if left==right:
-                    ls = s[left]
-                else:
-                    ls = s[left] + ls + s[right]
+                ls = s[left] if left==right else s[left] + ls + s[right]
                 left-=1
                 right+=1
             #Even Palindrome

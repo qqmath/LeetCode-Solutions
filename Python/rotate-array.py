@@ -4,7 +4,7 @@ class Solution:
         Do not return anything, modify nums in-place instead.
         """
         lenz = len(nums)
-        k = k % lenz
+        k %= lenz
         if k == 0:
             return nums
         nums += nums[:-k]

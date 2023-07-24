@@ -14,8 +14,7 @@ class Solution:
                 level.append(node.val if node else None)
                 length -= 1
                 if node:
-                    queue.append(node.left)
-                    queue.append(node.right)
+                    queue.extend((node.left, node.right))
             i = 0
             j = len(level) - 1
             while i <= j:

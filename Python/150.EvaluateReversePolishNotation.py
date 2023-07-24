@@ -12,8 +12,12 @@ class Solution:
             else:
                 y = stack.pop()
                 x = stack.pop()
-                if token == '+': stack.append(x + y)
-                if token == '-': stack.append(x - y)
-                if token == '*': stack.append(x * y)
-                if token == '/': stack.append(int(x / y))
+                if token == '*':
+                    stack.append(x * y)
+                elif token == '+':
+                    stack.append(x + y)
+                elif token == '-':
+                    stack.append(x - y)
+                elif token == '/':
+                    stack.append(int(x / y))
         return stack[0]

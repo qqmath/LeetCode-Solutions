@@ -48,8 +48,8 @@ class Solution:
         m,n = len(p),len(s)
         if len(p) - p.count("*") > len(s):
             return False
-        
-        dp = [[False]*(n+1) for i in range(m+1)]
+
+        dp = [[False]*(n+1) for _ in range(m+1)]
         for i in range(m+1):
             for j in range(n+1):
                 if j==0 and i==0:
@@ -58,7 +58,7 @@ class Solution:
                     dp[i][j] = False
                 elif j==0:
                     dp[i][j] = (p[i-1]=="*" and dp[i-1][j])
-                elif p[i-1] == s[j-1] or p[i-1]=='?':
+                elif p[i - 1] in [s[j - 1], '?']:
                     dp[i][j] = dp[i-1][j-1]
                 elif p[i-1]=='*':
                     dp[i][j] = dp[i-1][j] or dp[i][j-1]
