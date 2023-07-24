@@ -32,6 +32,4 @@ class Solution:
         num = int(str(num),2)
 
         #Checking if it matches any of the valid number
-        if num==(1<<(size-1)) or num==(0<<(size-1))  or num==((1<<size)-1):
-            return True
-        return False
+        return num in [1<<(size-1), 0<<(size-1), (1<<size)-1]

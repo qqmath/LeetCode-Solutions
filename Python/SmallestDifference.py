@@ -38,16 +38,19 @@ Constraints:
 -10^6 <= arr[i] <= 10^6
 """
 
-def smallestDifference(arr1 : list, arr2 : list) : 
-    arr1.sort();arr2.sort()
-    i = 0;j = 0
+def smallestDifference(arr1 : list, arr2 : list): 
+    arr1.sort()
+    arr2.sort()
+    i = 0
+    j = 0
 
-    smallest = float("inf");current=float("inf")
-    smallestPair = list()
-    
+    smallest = float("inf")
+    current=float("inf")
+    smallestPair = []
+
     while i < len(arr1) and j < len(arr2) : 
         fnum = arr1[i];snum = arr2[j]
-        
+
         if fnum < snum : 
             current = snum - fnum
             i += 1

@@ -6,8 +6,9 @@
 class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
         count = {}
-        for n in nums :
-            if count.get(n) != None :
+        for n in nums:
+            if count.get(n) is None:
+                count[n] = 1
+            else:
                 return True
-            count[n] = 1
         return False

@@ -22,13 +22,7 @@ def canJump(nums):
     while ptr2 >= 0:
         if nums[ptr2] >= ptr1 - ptr2:
             ptr1 = ptr2
-            ptr2 -= 1
-        else :
-            ptr2 -= 1
-
-    if ptr1 == 0:
-        return True
-    else:
-        return False
+        ptr2 -= 1
+    return ptr1 == 0
 
 print(canJump[3,2,1,0,4])

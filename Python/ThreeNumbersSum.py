@@ -29,10 +29,10 @@ Input: nums = [0]
 Output: []
 """
 
-def sum_of_three(arr, target=0) : 
-    result = list()
+def sum_of_three(arr, target=0): 
+    result = []
     arr.sort()
-    
+
     for i in range(len(arr)-2) : 
         left = i+1;right=len(arr)-1
 
